@@ -8,7 +8,7 @@ namespace E_WalletAPI.Repositories
         DailyTransaction GetDailyTransaction(Guid id);
 
         DailyTransaction CreateTransaction(DailyTransaction transaction);
-        //DailyTransaction UpdateTransaction(DailyTransaction transaction);
+        DailyTransaction UpdateTransaction(DailyTransaction transaction);
         void DeleteTransaction(DailyTransaction transaction);
 
     }

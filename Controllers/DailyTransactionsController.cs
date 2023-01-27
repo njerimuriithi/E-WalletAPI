@@ -1,4 +1,5 @@
-﻿using E_WalletAPI.Repositories;
+﻿using E_WalletAPI.DataDbContext;
+using E_WalletAPI.Repositories;
 using Microsoft.AspNetCore.Mvc;
 
 // For more information on enabling Web API for empty projects, visit https://go.microsoft.com/fwlink/?LinkID=397860
@@ -9,11 +10,21 @@ namespace E_WalletAPI.Controllers
     [ApiController]
     public class DailyTransactionsController : ControllerBase
     {
-        private readonly IWallet wallRepo;
-        public DailyTransactionsController(IWallet wallRepo)
-        {
-            this.wallRepo = wallRepo;
-        }
+        private readonly TransactionDbContext _transactionDbContext;
+        public DailyTransactionsController (TransactionDbContext dbContext)
+	        {
+            _transactionDbContext = dbContext;
+	        }
+
+        [HttpPost]
+public async Task<ActionResult<DailyTransaction>> PostDailyTransaction(DailyTransaction DailyT)
+{
+    _transactionDbContext.DailyTransactions.Add(DailyT);
+    await _context.SaveChangesAsync();
+
+    //    return CreatedAtAction("GetTodoItem", new { id = todoItem.Id }, todoItem);
+    return CreatedAtAction(nameof(GetDailyTransaction), new { id = DailyT.Id }, DailyT);
+}
 
         // GET: api/<DailyTransactionsController>
         [HttpGet]

@@ -2,7 +2,7 @@
 
 namespace E_WalletAPI.Repositories
 {
-    public class DailyTransactionRepo : IWallet
+    public class DailyTransactionRepo 
     {
       //create an Enum of Transaction Type random/Constant
         private readonly List<DailyTransaction>Transactions = new()
