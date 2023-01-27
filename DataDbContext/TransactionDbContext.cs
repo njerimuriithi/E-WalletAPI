@@ -5,11 +5,11 @@ namespace E_WalletAPI.DataDbContext
 {
     public class TransactionDbContext :DbContext
     {
-        public TransactionDbContext(DbContextOptions<TransactionDbContext> options)
-        : base(options)
+        public TransactionDbContext(DbContextOptions options) : base(options)
+
         {
         }
 
-        public DbSet<DailyTransaction> DailyTransactions { get; set; } = null!;
+        public DbSet<DailyTransaction> Transactions { get; set; } = null!;
     }
 }

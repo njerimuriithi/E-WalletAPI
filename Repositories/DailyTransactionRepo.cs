@@ -16,7 +16,7 @@ namespace E_WalletAPI.Repositories
               ModeOfPayment ="Mpesa", 
               DateOfTransaction = DateTime.Today,
               TransactionType="Random",
-              TransactionNecessary=true,
+             //TransactionNecessary=true,
               TotalAmount=327
               },
           new DailyTransaction{
@@ -28,7 +28,7 @@ namespace E_WalletAPI.Repositories
               ModeOfPayment ="Mpesa",
               DateOfTransaction = DateTime.Today,
               TransactionType="Constant",
-              TransactionNecessary=true,
+              //TransactionNecessary=true,
               TotalAmount=10175
               },
         } ;

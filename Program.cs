@@ -1,4 +1,5 @@
 ﻿using E_WalletAPI.Controllers;
+using E_WalletAPI.DataDbContext;
 using E_WalletAPI.Repositories;
 using Microsoft.EntityFrameworkCore;
 
@@ -10,8 +11,9 @@ builder.Services.AddControllers();
 // Learn more about configuring Swagger/OpenAPI at https://aka.ms/aspnetcore/swashbuckle
 builder.Services.AddEndpointsApiExplorer();
 builder.Services.AddSwaggerGen();
-builder.Services.AddDbContext<DbContext>(opt =>
-    opt.UseInMemoryDatabase("DailyList"));
+builder.Services.AddDbContext<TransactionDbContext>(options => options.UseInMemoryDatabase("TransactionList"));
+//builder.Services.AddDbContext<DbContext>(opt =>
+//    opt.UseInMemoryDatabase("DailyList"));
 //builder.Services.AddSingleton<IWallet,DailyTransactionRepo>();
 
 var app = builder.Build();

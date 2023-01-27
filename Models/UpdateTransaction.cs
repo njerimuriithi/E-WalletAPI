@@ -2,10 +2,8 @@
 
 namespace E_WalletAPI.Models
 {
-    public class DailyTransaction
+    public class UpdateTransaction
     {
-        public Guid Id { get; set; }
-        [Required]
         public string TransactionName { get; set; }
         [Required]
         public string CompanyName { get; set; }
@@ -18,14 +16,6 @@ namespace E_WalletAPI.Models
         public DateTime DateOfTransaction { get; set; }
         [Required]
         public string? TransactionType { get; set; }   //Enum whether Random or Constant
-        
-        //[Required]
-        //public bool TransactionNecessary { get; set; }
-        [Required]
-        public int TotalAmount { get; set; }
+
     }
-
-
-
-    
 }

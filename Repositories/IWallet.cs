@@ -2,14 +2,14 @@
 
 namespace E_WalletAPI.Repositories
 {
-    public interface IWallet
+    public class Wallet
     {
-        List<DailyTransaction> GetDailyTransactions();
-        DailyTransaction GetDailyTransaction(Guid id);
+        //List<DailyTransaction> GetDailyTransactions();
+        //DailyTransaction GetDailyTransaction(Guid id);
 
-        DailyTransaction CreateTransaction(DailyTransaction transaction);
-        DailyTransaction UpdateTransaction(DailyTransaction transaction);
-        void DeleteTransaction(DailyTransaction transaction);
+        //DailyTransaction CreateTransaction(DailyTransaction transaction);
+        //DailyTransaction UpdateTransaction(DailyTransaction transaction);
+        //void DeleteTransaction(DailyTransaction transaction);
 
     }
 }
