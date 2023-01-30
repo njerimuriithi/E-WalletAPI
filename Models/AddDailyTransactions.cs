@@ -4,9 +4,9 @@ namespace E_WalletAPI.Models
 {
     public class AddDailyTransactions
     {
-        public string TransactionName { get; set; }
+        public string TransactionName { get; set; }  = string.Empty;
         [Required]
-        public string CompanyName { get; set; }
+        public string CompanyName { get; set; }   = string.Empty;
         [Required]
         public int TransactionCost { get; set; }
         [Required]
